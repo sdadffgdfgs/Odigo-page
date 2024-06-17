@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -73,3 +74,106 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 56px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__item {
+  margin-right: 80px;
+}
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+  opacity: 0.75;
+}
+
+.header__link::after {
+  content: "";
+  display: inline-block;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: width 0.4s ease, opacity 0.4s ease;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+.header__link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.intro {
+  height: 100vh;
+  background-image: url(../img/main/intro/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
