@@ -69,7 +69,12 @@ header {
     &:hover,
     &:focus,
     &:active {
+        transition: all .5s;
         opacity: .75;
+    }
+    &:not(:hover){
+        opacity: 1;
+        transition: .5s;
     }
 }
 
@@ -96,4 +101,64 @@ header {
     background-image: url(../img/main/intro/intro.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 263px;
 }
+
+.intro__title{
+    font-weight: 500;
+    color: white;
+    font-size: 50px;
+    max-width: 619px;
+    line-height: 60px;
+    margin-bottom: 22px;
+}
+
+.intro__subtitle{
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 546px;
+    margin-bottom: 59px;
+}
+
+.search__form-input{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search__form-field{
+    width: 297px;
+    background-color: gray;
+    background: url(/img/main/intro/input_circle.svg) no-repeat left 8px;
+    background-size: 20px; 
+    margin-right: 60px;
+    border-bottom: 2px solid #BFC0C5;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    &::placeholder{
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+    }
+}
+
+.search__form-button{
+    padding: 15px 39px;
+    background-color: #1B7DFF;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    color: white;
+    &:hover,
+    &:focus,
+    &:active {
+        transition: .5s;
+        background-color: #1256af;
+    }
+    &:not(:hover){
+        transition: .5s;
+    }
+}
+
