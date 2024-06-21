@@ -8,6 +8,11 @@ body {
     font-size: 16px;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -72,7 +77,8 @@ header {
         transition: all .5s;
         opacity: .75;
     }
-    &:not(:hover){
+
+    &:not(:hover) {
         opacity: 1;
         transition: .5s;
     }
@@ -96,7 +102,7 @@ header {
     opacity: 1;
 }
 
-.intro{
+.intro {
     height: 100vh;
     background-image: url(../img/main/intro/intro.jpg);
     background-repeat: no-repeat;
@@ -104,7 +110,7 @@ header {
     padding-top: 263px;
 }
 
-.intro__title{
+.intro__title {
     font-weight: 500;
     color: white;
     font-size: 50px;
@@ -113,7 +119,7 @@ header {
     margin-bottom: 22px;
 }
 
-.intro__subtitle{
+.intro__subtitle {
     color: white;
     font-size: 16px;
     line-height: 24px;
@@ -121,16 +127,16 @@ header {
     margin-bottom: 59px;
 }
 
-.search__form-input{
+.search__form-input {
     display: flex;
     flex-wrap: wrap;
 }
 
-.search__form-field{
+.search__form-field {
     width: 297px;
     background-color: gray;
     background: url(/img/main/intro/input_circle.svg) no-repeat left 8px;
-    background-size: 20px; 
+    background-size: 20px;
     margin-right: 60px;
     border-bottom: 2px solid #BFC0C5;
     padding-left: 43px;
@@ -138,27 +144,91 @@ header {
     font-size: 18px;
     font-weight: 500;
     color: white;
-    &::placeholder{
+
+    &::placeholder {
         font-size: 18px;
         font-weight: 500;
         color: white;
     }
 }
 
-.search__form-button{
+.search__form-button {
     padding: 15px 39px;
     background-color: #1B7DFF;
     font-family: "Lato", sans-serif;
     font-size: 24px;
     color: white;
+
     &:hover,
     &:focus,
     &:active {
         transition: .5s;
         background-color: #1256af;
     }
-    &:not(:hover){
+
+    &:not(:hover) {
         transition: .5s;
     }
 }
 
+
+.benefits__wrapper {
+    width: 1262px;
+    margin: 0 auto;
+    box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.benefits__title {
+    width: 100%;
+    font-size: 35px;
+    line-height: 42px;
+    padding: 93px 100px 88px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-40%);
+    background-color: #fff;
+}
+
+.benefits__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 134px 100px 0;
+}
+
+.benefits__card {
+    width: 317px;
+}
+
+.benefits__card-pic {
+    margin-bottom: 37px;
+    width: 66px;
+    height: 66px;
+}
+
+.benefits__card-pic-img{
+    display: block;
+}
+
+.benefits__card-title {
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.benefits__card-subtitle {
+    padding-bottom: 63px;
+}
+
+
+.benefits__card-link {
+    display: inline-block;
+    padding-right: 59px;
+    text-decoration: none;
+    color: #006DFE;
+    line-height: 24px;
+    background: url(/img/main/benefits/arrow.svg) right;
+    background-repeat: no-repeat;
+}
