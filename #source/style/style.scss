@@ -8,7 +8,7 @@ body {
     font-size: 16px;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
@@ -43,6 +43,31 @@ header {
     margin: 0 auto;
 }
 
+.wrapper__large {
+    max-width: 1264px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 24px;
+    position: relative;
+    padding-bottom: 17px;
+}
+
+.section-title::after {
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
 .header__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -70,17 +95,12 @@ header {
     color: white;
     text-decoration: none;
     position: relative;
+    transition: all .5s;
 
     &:hover,
     &:focus,
     &:active {
-        transition: all .5s;
         opacity: .75;
-    }
-
-    &:not(:hover) {
-        opacity: 1;
-        transition: .5s;
     }
 }
 
@@ -103,11 +123,12 @@ header {
 }
 
 .intro {
-    height: 100vh;
+    height: 962px;
     background-image: url(../img/main/intro/intro.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 263px;
+   padding-bottom: 223px;
 }
 
 .intro__title {
@@ -158,22 +179,21 @@ header {
     font-family: "Lato", sans-serif;
     font-size: 24px;
     color: white;
+    transition: .5s all;
 
     &:hover,
     &:focus,
     &:active {
-        transition: .5s;
         background-color: #1256af;
-    }
-
-    &:not(:hover) {
-        transition: .5s;
     }
 }
 
+.benefits {
+    margin-bottom: 131px;
+}
 
 .benefits__wrapper {
-    width: 1262px;
+    max-width: 1262px;
     margin: 0 auto;
     box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
     position: relative;
@@ -187,7 +207,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-40%);
+    transform: translateY(-100%);
     background-color: #fff;
 }
 
@@ -195,11 +215,12 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 55px;
-    padding: 134px 100px 0;
+    padding: 0 100px;
 }
 
 .benefits__card {
-    width: 317px;
+    max-width: 317px;
+    padding-bottom: 112px;
 }
 
 .benefits__card-pic {
@@ -208,7 +229,7 @@ header {
     height: 66px;
 }
 
-.benefits__card-pic-img{
+.benefits__card-pic-img {
     display: block;
 }
 
@@ -222,13 +243,125 @@ header {
     padding-bottom: 63px;
 }
 
-
 .benefits__card-link {
     display: inline-block;
-    padding-right: 59px;
+    padding-right: 69px;
     text-decoration: none;
     color: #006DFE;
     line-height: 24px;
-    background: url(/img/main/benefits/arrow.svg) right;
+    background: url(/img/main/benefits/arrow.svg) 90%;
     background-repeat: no-repeat;
+    transition: .2s all;
+
+    &:hover,
+    :focus {
+        background: url(/img/main/benefits/arrow.svg) 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.places{
+    margin-bottom: 131px;
+}
+
+.places__caption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.places__title {
+    margin-right: 15px;
+}
+
+.places__button-link {
+    display: inline-block;
+    padding-right: 69px;
+    text-decoration: none;
+    color: #006DFE;
+    font-size: 16px;
+    line-height: 24px;
+    background: url(/img/main/benefits/arrow.svg) 90%;
+    background-repeat: no-repeat;
+    transition: .2s all;
+
+    &:hover,
+    :focus {
+        background: url(/img/main/benefits/arrow.svg) 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.trip__cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.trip__card {
+    position: relative;
+    overflow: hidden;
+}
+
+.trip__card::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.trip__card:hover .trip__card-pic{
+    transform: scale(1.03);
+}
+
+.trip__card-title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 1;
+}
+
+.trip__card-size-large {
+    grid-column: span 3;
+}
+
+.trip__card-size-small{
+    grid-column: span 2;
+}
+
+.trip__card-pic {
+    width: 100%;
+    object-fit: cover;
+    transition: .5s all;
+}
+
+.trip__card-pic-size-large{
+    height: 354px;
+}
+
+.trip__card-pic-size-small{
+    height: 283px;
+}
+
+.trip__card-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.trip__card-size-small{
+
 }
