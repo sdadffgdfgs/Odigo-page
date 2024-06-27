@@ -140,6 +140,7 @@ header {
   left: 0;
 }
 
+/* header start */
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,6 +203,8 @@ header {
   opacity: 1;
 }
 
+/* header eng */
+/* intro start */
 .intro {
   height: 962px;
   background-image: url(../img/main/intro/intro.jpg);
@@ -288,6 +291,8 @@ header {
   background-color: #1256af;
 }
 
+/* intro end */
+/* benefits start */
 .benefits {
   margin-bottom: 131px;
 }
@@ -364,6 +369,8 @@ header {
   background-repeat: no-repeat;
 }
 
+/* benefits end */
+/* places start */
 .places {
   margin-bottom: 131px;
 }
@@ -479,3 +486,66 @@ header {
   width: 100%;
   z-index: 2;
 }
+
+/* places end */
+/* tours start */
+.tours {
+  margin-bottom: 139px;
+}
+
+.tours__tour {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 108px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 77px;
+}
+
+.tour__info {
+  padding-left: 47px;
+}
+
+.tour__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  max-width: 360px;
+}
+
+.tour__title-large {
+  margin-bottom: 83px;
+}
+
+.tour__title-small {
+  margin-bottom: 45px;
+}
+
+.tour__subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 58px;
+  max-width: 519px;
+}
+
+.tour__button {
+  display: inline-block;
+  padding-right: 69px;
+  text-decoration: none;
+  color: #006DFE;
+  line-height: 24px;
+  background: url(/img/main/benefits/arrow.svg) 90%;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.tour__button:hover,
+.tour__button :focus {
+  background: url(/img/main/benefits/arrow.svg) 100%;
+  background-repeat: no-repeat;
+}
+
+/* tours end */
