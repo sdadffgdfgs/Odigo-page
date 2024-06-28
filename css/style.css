@@ -79,6 +79,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  color: #102746;
 }
 
 img {
@@ -102,13 +103,6 @@ img {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-style: normal;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
 .wrapper {
@@ -141,6 +135,17 @@ header {
 }
 
 /* header start */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  padding-bottom: 20px;
+  z-index: 999;
+}
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +159,11 @@ header {
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 56px;
+}
+
+.header__active {
+  background: #0E1D28;
+  opacity: 0.9;
 }
 
 .header__list {
@@ -549,3 +559,179 @@ header {
 }
 
 /* tours end */
+/* visit start */
+.visit {
+  margin-bottom: 86px;
+}
+
+.visit__title {
+  margin-bottom: 54px;
+}
+
+.top__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 57px 1fr 57px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 57px;
+}
+
+.top__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.6);
+  padding: 16px 25px;
+}
+
+.top__card-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 auto 0 0;
+}
+
+.top__card-likes {
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: #fff;
+  padding-right: 20px;
+  background: url(/img/main/top_visit/like.svg) no-repeat right;
+  margin-right: 14px;
+}
+
+.top__card-comments {
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: #fff;
+  padding-right: 23px;
+  background: url(/img/main/top_visit/comment.svg) no-repeat right;
+}
+
+.top__card-subtitle {
+  margin-bottom: 31px;
+}
+
+.top__card-link {
+  padding: 12px 19px;
+  background-color: #006DFE;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 118px;
+  margin: auto 0 0 0;
+}
+.top__card-link:hover, .top__card-link:focus, .top__card-link:active {
+  background-color: #1256af;
+}
+
+/* visit end */
+.videos {
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.videos__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video__item {
+  padding-top: 56.25%;
+}
+
+.video__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  background: #0E1D28;
+  padding: 119px 0;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 50%;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+.footer__menu-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.footer__menu-item {
+  padding-bottom: 6px;
+}
+
+.footer__menu-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.footer__menu-link:last-child {
+  padding-bottom: 0;
+}
+.footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active {
+  opacity: 0.5;
+}
